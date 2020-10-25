@@ -14,7 +14,7 @@ class PostsController < ApplicationController
   def checked
     post = Post.find(params[:id])
     if post.checked # .checkedという既読であるか否かを判定するプロパティを指定
-      post.update(checked: fales)
+      post.update(checked: false)
     else
       post.update(checked: true)
     end
