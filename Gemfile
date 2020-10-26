@@ -57,3 +57,8 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'pry-rails'
+
+# herokuデプロイ用gem。開発環境ではなく本番環境で使用するGemです。このように:productionで指定すると本番環境のみで使用されるように指定できます。
+group :production do
+  gem 'rails_12factor'
+end
